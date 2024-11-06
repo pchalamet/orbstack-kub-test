@@ -1,0 +1,16 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: orbstack-kub-test-deployment
+spec:
+  selector:
+    matchLabels:
+      app: orbstack-kub-test
+  template:
+    metadata:
+      labels:
+        app: orbstack-kub-test
+    spec:
+      containers:
+        - name: orbstack-kub-test
+          image: orbstack-kub-test:42
